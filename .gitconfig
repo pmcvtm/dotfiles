@@ -1,0 +1,30 @@
+[user]
+  email = patrick@example.com
+  name = Patrick McVeety-Mill
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+[pull]
+  rebase = true
+[diff]
+  tool = bc4x
+  renames = copies
+[difftool "bc4x"]
+  cmd = \"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[merge]
+  external = bc4x
+[mergetool "bc4x"]
+  cmd = \"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+  trustExitCode = true
+[mergetool]
+  prompt = false
+  keepBackup = false
+[credential]
+  helper = wincred
+[gui]
+[core]
+  autocrlf = true
+  whitespace = cr-at-eol
