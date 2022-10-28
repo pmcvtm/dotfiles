@@ -29,6 +29,8 @@
   autocrlf = true
   whitespace = cr-at-eol
   editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession -noPlugin
+[help]
+  autocorrect = -1
 [alias]
   st = status
   co = checkout
