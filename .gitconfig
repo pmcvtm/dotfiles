@@ -29,3 +29,26 @@
   autocrlf = true
   whitespace = cr-at-eol
   editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession -noPlugin
+[alias]
+  st = status
+  co = checkout
+  cob = checkout -b
+  ada = add --all
+  ci = commit
+  cim = commit -m
+  cam = commit --amend -m
+  acim = !git ada && git cim
+  br = branch
+  rb = rebase
+  rbi = rebase --interactive
+  rbc = rebase --continue
+  rba = rebase --abort
+  dt = difftool --dir-diff
+  dts = difftool --staged --dir-diff
+  rh = reset HEAD
+  wip = !git ada && git cim WIP
+  unwip = reset HEAD~1
+  sync = !git fetch origin master:master && git rebase main
+  pushf = push --force-with-lease
+  open = !explorer `git config remote.origin.url`
+  browse = !git open
