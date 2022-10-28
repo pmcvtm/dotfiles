@@ -28,3 +28,4 @@
 [core]
   autocrlf = true
   whitespace = cr-at-eol
+  editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession -noPlugin
