@@ -1,0 +1,97 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "green",
+          "properties": {
+            "style": "short"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "red",
+          "properties": {
+            "root_icon": "\uf12a"
+          },
+          "style": "plain",
+          "template": "\uf0e7",
+          "type": "root"
+        },
+        {
+          "foreground": "cyan",
+          "properties": {
+            "display_id": true,
+            "display_name": true,
+            "info_separator": " @ "
+          },
+          "style": "plain",
+          "template": " \ufd03 {{ .Name }} ",
+          "type": "az"
+        },
+        {
+          "foreground": "white",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}white{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}white{{ end }}",
+            "{{ if gt .Ahead 0 }}blue{{ end }}",
+            "{{ if gt .Behind 0 }}green{{ end }}"
+          ],
+          "properties": {
+            "branch_ahead_icon": "\uf062",
+            "branch_behind_icon": "\uf063",
+            "branch_gone_icon": "",
+            "branch_icon": "\ue725 ",
+            "branch_identical_icon": "",
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<white>{{ .Working.String }}</>{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}}{{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "white",
+          "properties": {
+            "time_format": "3:04PM"
+          }
+        },
+        {
+          "type": "exit",
+          "background": "red",
+          "foreground": "yellow",
+          "properties": {
+            "always_enabled": false,
+            "display_exit_code": true
+          },
+          "style": "plain",
+          "template": " \uf00d {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "type": "newline"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "gray",
+          "style": "plain",
+          "template": "PS> ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "blue",
+          "foreground": "lightWhite",
+          "properties": {
+            "style": "short"
+          },
+          "style": "powerline",
+          "template": " \ue5ff {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "red",
+          "foreground": "lightWhite",
+          "properties": {
+            "root_icon": "\uf12a"
+          },
+          "style": "powerline",
+          "template": " \uf0e7 ",
+          "type": "root"
+        },
+        {
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}darkGray{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}lightMagenta{{ end }}",
+            "{{ if gt .Ahead 0 }}lightRed{{ end }}",
+            "{{ if gt .Behind 0 }}green{{ end }}"
+          ],
+          "foreground": "lightWhite",
+          "properties": {
+            "branch_ahead_icon": "\uf062 ",
+            "branch_behind_icon": "\uf063 ",
+            "branch_gone_icon": "",
+            "branch_icon": "\ue725 ",
+            "branch_identical_icon": "",
+            "fetch_stash_count": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}<white>{{ .Working.String }}</>{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}}{{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "background": "lightBlue",
+          "foreground": "black",
+          "properties": {
+            "time_format": "3:04PM"
+          }
+        },
+        {
+          "background": "lightGreen",
+          "background_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ],
+          "foreground": "white",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " \uf111 ",
+          "trailing_diamond": "\ue0b4",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "type": "newline"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "darkGray",
+          "style": "plain",
+          "template": "{{ .Name }}>",
+          "type": "shell"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
