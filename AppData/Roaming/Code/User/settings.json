@@ -1,0 +1,30 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "FiraCode NF, Consolas, 'Courier New', monospace",
+    "editor.renderWhitespace": "all",
+    "auto-close-tag.disableOnLanguage": [
+    ],
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ]
+}
