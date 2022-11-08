@@ -95,6 +95,7 @@
                 "name": "Windows PowerShell"
             },
             {
+                "colorScheme": "SeaShells",
                 "guid": "{59b72ad2-09f7-55ec-af87-65d062af8472}",
                 "hidden": false,
                 "name": "Ubuntu 20.04.5 LTS",
