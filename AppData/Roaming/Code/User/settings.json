@@ -26,5 +26,6 @@
         "HTML (EEx)",
         "HTML (Eex)",
         "plist"
-    ]
+    ],
+    "workbench.editor.showTabs": false
 }
