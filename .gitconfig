@@ -52,6 +52,6 @@
   rbi = rebase --interactive
   rh = reset HEAD
   st = status
-  sync = !git fetch origin master:master && git rebase main
+  sync = !git fetch origin main:main && git rebase main
   unwip = reset HEAD~1
   wip = !git ada && git cim WIP
