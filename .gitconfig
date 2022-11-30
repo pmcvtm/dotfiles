@@ -42,6 +42,7 @@
   ci = commit
   cim = commit -m
   dt = difftool --dir-diff
+  ds = diff --staged
   dts = difftool --staged --dir-diff
   logo = log --oneline
   open = !explorer `git config remote.origin.url`
