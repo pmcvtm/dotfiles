@@ -54,3 +54,4 @@
   pushf = push --force-with-lease
   open = !explorer `git config remote.origin.url`
   browse = !git open
+  logo = log --oneline
