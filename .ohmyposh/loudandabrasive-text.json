@@ -78,10 +78,6 @@
     },
     {
       "alignment": "left",
-      "type": "newline"
-    },
-    {
-      "alignment": "left",
       "segments": [
         {
           "foreground": "gray",
@@ -90,7 +86,8 @@
           "type": "text"
         }
       ],
-      "type": "prompt"
+      "type": "prompt",
+	  "newline": true
     }
   ],
   "version": 2

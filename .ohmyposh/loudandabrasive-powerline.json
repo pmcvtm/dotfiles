@@ -85,7 +85,8 @@
           "type": "shell"
         }
       ],
-      "type": "prompt"
+      "type": "prompt",
+	  "newline": true
     }
   ],
   "version": 2
