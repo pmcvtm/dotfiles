@@ -1,0 +1,64 @@
+[user]
+  email = patrick@example.com
+  name = Patrick McVeety-Mill
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+[pull]
+  rebase = true
+[diff]
+  tool = meld
+  renames = copies
+[difftool]
+  prompt = false
+[difftool "meld"]
+  cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+  external = meld
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "meld"]
+  cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[credential]
+  helper = /usr/local/bin/git-credential-manager
+  credentialStore = secretservice
+[gui]
+[core]
+  whitespace = cr-at-eol
+  editor = gedit -s
+[help]
+  autocorrect = -1
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[alias]
+  acim = !git ada && git cim
+  ada = add --all
+  br = branch
+  browse = !git open
+  co = checkout
+  cob = checkout -b
+  confige = config --edit
+  configg = config --edit --global
+  cam = commit --amend -m
+  ci = commit
+  cim = commit -m
+  dt = difftool --dir-diff
+  ds = diff --staged
+  dts = difftool --staged --dir-diff
+  logo = log --oneline
+  open = !explorer `git config remote.origin.url`
+  pushf = push --force-with-lease
+  rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase --interactive
+  rh = reset HEAD
+  st = status
+  sync = !git fetch origin main:main && git rebase main
+  unwip = reset HEAD~1
+  wip = !git ada && git cim WIP
