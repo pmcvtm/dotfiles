@@ -38,6 +38,8 @@
   browse = !git open
   co = checkout
   cob = checkout -b
+  confige = config --edit
+  configg = config --edit --global
   cam = commit --amend -m
   ci = commit
   cim = commit -m
