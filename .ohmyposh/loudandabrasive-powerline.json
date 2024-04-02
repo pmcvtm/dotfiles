@@ -9,7 +9,7 @@
           "foreground": "black",
           "style": "diamond",
           "trailing_diamond": "",
-          "template": "{{if ne .UserName \"pmcvtm\"}}{{.UserName}} {{end}}{{if .Root}}\ue3c5{{end}}{{if eq \"toolbox\" .HostName }}\udb82\udf8b{{end}}{{if .SSHSession}} \ueb39 .HostName {{end}}",
+          "template": "{{if ne .UserName \"pmcvtm\"}}{{.UserName}} {{end}}{{if .Root}}\ue3c5{{end}}{{if eq \"toolbox\" .HostName }}\udb82\udec8{{end}}{{if .SSHSession}} \ueb39 .HostName {{end}}",
           "type": "session"
         },
         {
