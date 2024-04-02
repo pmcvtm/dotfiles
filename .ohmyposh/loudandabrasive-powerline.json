@@ -4,13 +4,21 @@
     {
       "alignment": "left",
       "segments": [
+      {
+          "background": "lightCyan",
+          "foreground": "black",
+          "style": "diamond",
+          "trailing_diamond": "",
+          "template": "",
+          "type": "session"
+        },
         {
           "background": "blue",
           "foreground": "lightWhite",
           "properties": {
             "style": "short"
           },
-          "style": "powerline",
+          "style": "diamond",
           "template": " \ue5ff {{ .Path }} ",
           "type": "path"
         },
