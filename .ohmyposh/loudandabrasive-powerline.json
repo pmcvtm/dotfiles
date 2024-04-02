@@ -9,7 +9,7 @@
           "foreground": "black",
           "style": "diamond",
           "trailing_diamond": "",
-          "template": "",
+          "template": "{{if ne .UserName \"pmcvtm\"}}{{.UserName}} {{end}}",
           "type": "session"
         },
         {
