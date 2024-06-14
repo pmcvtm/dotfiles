@@ -52,7 +52,7 @@
   dts = difftool --staged --dir-diff
   logo = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)%ad%Creset %s' --date=short
   logob = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)%ad%Creset %C(green)%cn%Creset %s' --date=short
-  open = !explorer `git config remote.origin.url`
+  open = !xdg-open `git config remote.origin.url`
   pushf = push --force-with-lease
   rb = rebase
   rba = rebase --abort
