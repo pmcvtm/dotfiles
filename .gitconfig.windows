@@ -46,7 +46,8 @@
   dt = difftool --dir-diff
   ds = diff --staged
   dts = difftool --staged --dir-diff
-  logo = log --oneline
+  logo = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)%ad%Creset %s' --date=short
+  logob = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)%ad%Creset %C(green)%cn%Creset %s' --date=short
   open = !explorer `git config remote.origin.url`
   pushf = push --force-with-lease
   rb = rebase
